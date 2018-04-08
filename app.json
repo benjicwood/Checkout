@@ -1,0 +1,7 @@
+{
+    "name": "Ben Charlwood Checkout App",
+    "description": "A Checkout as an example of a React App",
+    "repository": "https://github.com/benjicwood/Checkout",
+    "keywords": ["node", "express", "heroku"],
+    "image": "heroku/nodejs"
+  }
