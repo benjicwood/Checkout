@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Product from '../../models/Product';
-import './Product.css';
 
 import { selectItem, setTotal, setDiscount, bogofOffer } from '../../actions/actions';
 
@@ -20,11 +19,11 @@ class ProductComponent extends Component {
   }
   render () {
     return (
-      <div className='Product' onClick={() => this.handleClick(this.props.product)}>
-        <div className='Product-name'>
+      <div onClick={() => this.handleClick(this.props.product)}>
+        <div>
           {this.props.product.name}
         </div>
-        <div className='Product-price'>
+        <div>
           £{this.props.product.getFormattedPrice()}
         </div>
       </div>

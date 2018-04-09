@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Order.css';
 import { formattedPrice, discountedPrice } from '../../helpers/price';
 
 class OrderComponent extends Component {

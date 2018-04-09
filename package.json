@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node index.js",
     "test": "node test.js",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack-dev-server --content-base dist"
   },
   "dependencies": {
     "cool-ascii-faces": "1.3.4",

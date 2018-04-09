@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Order from '../Order';
 import ProductList from '../ProductList';
-import './App.css';
 
 import { setProducts } from '../../actions/actions';
 
@@ -13,11 +12,11 @@ class AppComponent extends Component {
   render () {
     if (!this.props.products) return <div>Loading...</div>;
     return (
-      <div className='App'>
-        <div className='App-header'>
+      <div>
+        <div>
           <h1>Welcome to the Checkout</h1>
         </div>
-        <div className='App-body'>
+        <div>
           <ProductList products={this.props.products} />
           <Order basket={this.props.basket} total={this.props.total} />
         </div>
