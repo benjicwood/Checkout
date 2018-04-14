@@ -4,6 +4,7 @@ import Order from '../Order';
 import ProductList from '../ProductList';
 
 import { setProducts } from '../../actions/actions';
+import { AppStyle, AppHeader, AppBody } from './Style';
 
 class AppComponent extends Component {
   componentWillMount () {
@@ -12,11 +13,11 @@ class AppComponent extends Component {
   render () {
     if (!this.props.products) return <div>Loading...</div>;
     return (
-      <div>
-        <div>
+      <div style={AppStyle}>
+        <div style={AppHeader}>
           <h1>Welcome to the Checkout</h1>
         </div>
-        <div>
+        <div style={AppBody}>
           <ProductList products={this.props.products} />
           <Order basket={this.props.basket} total={this.props.total} />
         </div>

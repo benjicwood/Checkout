@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Product from '../../models/Product';
 
 import { selectItem, setTotal, setDiscount, bogofOffer } from '../../actions/actions';
+import { ProductStyle, ProductName, ProductPrice } from './Style';
 
 class ProductComponent extends Component {
   handleClick (product) {
@@ -19,11 +20,11 @@ class ProductComponent extends Component {
   }
   render () {
     return (
-      <div onClick={() => this.handleClick(this.props.product)}>
-        <div>
+      <div style={ProductStyle} onClick={() => this.handleClick(this.props.product)}>
+        <div style={ProductName}>
           {this.props.product.name}
         </div>
-        <div>
+        <div style={ProductPrice}>
           £{this.props.product.getFormattedPrice()}
         </div>
       </div>

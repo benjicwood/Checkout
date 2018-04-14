@@ -24757,6 +24757,8 @@ var _ProductList2 = _interopRequireDefault(_ProductList);
 
 var _actions = __webpack_require__(99);
 
+var _Style = __webpack_require__(240);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24789,10 +24791,10 @@ var AppComponent = function (_Component) {
       );
       return _react2.default.createElement(
         'div',
-        null,
+        { style: _Style.AppStyle },
         _react2.default.createElement(
           'div',
-          null,
+          { style: _Style.AppHeader },
           _react2.default.createElement(
             'h1',
             null,
@@ -24801,7 +24803,7 @@ var AppComponent = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          null,
+          { style: _Style.AppBody },
           _react2.default.createElement(_ProductList2.default, { products: this.props.products }),
           _react2.default.createElement(_Order2.default, { basket: this.props.basket, total: this.props.total })
         )
@@ -25015,6 +25017,8 @@ var _Product3 = __webpack_require__(57);
 
 var _Product4 = _interopRequireDefault(_Product3);
 
+var _Style = __webpack_require__(239);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25037,10 +25041,10 @@ var ProductListComponent = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { style: _Style.ProductList },
         _react2.default.createElement(
           'h2',
-          null,
+          { style: _Style.ProductListTitle },
           'Our Products'
         ),
         this.props.products.map(function (x) {
@@ -25107,6 +25111,8 @@ var _Product2 = _interopRequireDefault(_Product);
 
 var _actions = __webpack_require__(99);
 
+var _Style = __webpack_require__(238);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25144,17 +25150,17 @@ var ProductComponent = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { onClick: function onClick() {
+        { style: _Style.ProductStyle, onClick: function onClick() {
             return _this2.handleClick(_this2.props.product);
           } },
         _react2.default.createElement(
           'div',
-          null,
+          { style: _Style.ProductName },
           this.props.product.name
         ),
         _react2.default.createElement(
           'div',
-          null,
+          { style: _Style.ProductPrice },
           '\xA3',
           this.props.product.getFormattedPrice()
         )
@@ -25189,6 +25195,82 @@ var _Product2 = _interopRequireDefault(_Product);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = [new _Product2.default('CA6', 'Cake', 200), new _Product2.default('A21', 'Kitty Litter', 1899), new _Product2.default('G95', 'Asparagus', 83)];
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var ProductStyle = exports.ProductStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '0.8em 1em',
+    background: 'indianred',
+    color: 'white'
+};
+
+var ProductName = exports.ProductName = {
+    fontWeight: 'bold'
+};
+
+var ProductPrice = exports.ProductPrice = {
+    fontFamily: 'monospace'
+};
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var ProductList = exports.ProductList = {
+    marginLeft: '10px',
+    border: '2px solid #333',
+    padding: '15px 10px',
+    width: '40%',
+    maxWidth: '600px',
+    margin: '7px'
+};
+
+var ProductListTitle = exports.ProductListTitle = {
+    marginTop: '0'
+};
+
+/***/ }),
+/* 240 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var AppStyle = exports.AppStyle = {
+  textAlign: 'center'
+};
+
+var AppHeader = exports.AppHeader = {
+  backgroundColor: '#222',
+  height: '100px',
+  padding: '20px',
+  color: 'white'
+};
+
+var AppBody = exports.AppBody = {
+  display: 'flex',
+  justifyContent: 'space-around',
+  margin: '20px 0'
+};
 
 /***/ })
 /******/ ]);
