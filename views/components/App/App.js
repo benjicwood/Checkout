@@ -18,8 +18,8 @@ class AppComponent extends Component {
           <h1>Welcome to the Checkout</h1>
         </div>
         <div style={AppBody}>
-          <ProductList products={this.props.products} />
-          <Order basket={this.props.basket} total={this.props.total} />
+            <ProductList products={this.props.products} />
+            <Order basket={this.props.basket} total={this.props.total} />
         </div>
       </div>
     );

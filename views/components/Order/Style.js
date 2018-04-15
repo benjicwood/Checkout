@@ -1,8 +1,8 @@
-export const Order = {
+export const OrderStyle = {
     display: 'flex',
     justifyContent: 'space-between',
     padding: '0,.8em 1em',
-    background: indianred,
+    background: 'indianred',
     color: 'white'
 }
 
